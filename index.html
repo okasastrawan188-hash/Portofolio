@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Nengah Oka Sastrawan - Portofolio Tradisional Minimalis</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Premium Typography (Sans & Serif) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome for sleek icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bali: {
+                            gold: '#C29543',       /* Prada Gold Muted - Emas Bali Elegan */
+                            goldLight: '#F7EEDC',
+                            red: '#8E2420',        /* Red Brick / Terracotta Pura */
+                            redDark: '#601411',
+                            linen: '#FAF8F5',      /* Latar Belakang Linen Minimalis Terang */
+                            sand: '#F2EDE4',       /* Latar Belakang Elemen Kontras */
+                            basalt: '#23201D',     /* Teks Gelap Basalt Candi */
+                            slate: '#544F49',      /* Teks Muted */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar matching Bali theme */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8E2420;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C29543;
+        }
+        
+        /* Subtle woodblock print texture for traditional luxury feel */
+        .woodblock-pattern {
+            background-color: #FAF8F5;
+            background-image: radial-gradient(#8E2420 0.5px, transparent 0.5px), radial-gradient(#8E2420 0.5px, #FAF8F5 0.5px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            opacity: 0.015;
+        }
+    </style>
+</head>
+<body class="bg-bali-linen text-bali-basalt font-sans selection:bg-bali-gold selection:text-white">
+
+    <!-- REUSABLE BALINESE TRADITIONAL SVG WATERMARK -->
+    <div class="fixed inset-0 pointer-events-none woodblock-pattern z-0"></div>
+
+    <!-- ================================================================= -->
+    <!-- 🌺 KODE GAMBAR UKIRAN UTAMA DI SUDUT ATAS KANAN (ukiran.png)      -->
+    <!-- ================================================================= -->
+    <div class="fixed top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 opacity-10 pointer-events-none z-0 transform scale-x-[-1] select-none">
+        <img src="asset/ukiran.png" alt="Ukiran Bali Corner" class="w-full h-full object-contain">
+    </div>
+    <!-- ================================================================= -->
+
+    <!-- ================================================================= -->
+    <!-- 🌺 KODE GAMBAR UKIRAN UTAMA DI SUDUT BAWAH KIRI (ukiran.png)      -->
+    <!-- ================================================================= -->
+    <div class="fixed bottom-0 left-0 w-32 h-32 sm:w-48 sm:h-48 opacity-10 pointer-events-none z-0 select-none">
+        <img src="asset/ukiran.png" alt="Ukiran Bali Corner" class="w-full h-full object-contain">
+    </div>
+    <!-- ================================================================= -->
+
+    <!-- NAVIGATION HEADER -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-bali-linen/80 backdrop-blur-md border-b border-bali-sand transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Name -->
+                <div class="flex-shrink-0">
+                    <a href="#hero" class="text-lg font-serif font-bold tracking-wider text-bali-basalt hover:text-bali-red transition-colors duration-300 flex items-center space-x-2">
+                        <!-- Tiny traditional symbol -->
+                        <span class="text-bali-gold"><i class="fa-solid fa-leaf text-sm"></i></span>
+                        <span>OKA<span class="text-bali-red font-sans font-light">.SASTRAWAN</span></span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Nav Items -->
+                <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-semibold">
+                    <a href="#about" class="text-bali-slate hover:text-bali-red transition-colors duration-300">Tentang</a>
+                    <a href="#skills" class="text-bali-slate hover:text-bali-red transition-colors duration-300">Keahlian</a>
+                    <a href="#projects" class="text-bali-slate hover:text-bali-red transition-colors duration-300">Proyek Web</a>
+                    <a href="#posters" class="text-bali-slate hover:text-bali-red transition-colors duration-300">Poster</a>
+                    <a href="#banners" class="text-bali-slate hover:text-bali-red transition-colors duration-300">Banner & Brosur</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-full bg-bali-red hover:bg-bali-redDark text-white transition-all duration-300 shadow-md">Hubungi</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-bali-basalt hover:text-bali-red focus:outline-none transition-colors duration-300">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-bali-linen/95 border-b border-bali-sand px-6 pt-4 pb-8 space-y-4">
+            <a href="#about" class="block text-sm uppercase tracking-wider text-bali-basalt hover:text-bali-red py-2 border-b border-bali-sand/40">Tentang</a>
+            <a href="#skills" class="block text-sm uppercase tracking-wider text-bali-basalt hover:text-bali-red py-2 border-b border-bali-sand/40">Keahlian</a>
+            <a href="#projects" class="block text-sm uppercase tracking-wider text-bali-basalt hover:text-bali-red py-2 border-b border-bali-sand/40">Proyek Web</a>
+            <a href="#posters" class="block text-sm uppercase tracking-wider text-bali-basalt hover:text-bali-red py-2 border-b border-bali-sand/40">Poster</a>
+            <a href="#banners" class="block text-sm uppercase tracking-wider text-bali-basalt hover:text-bali-red py-2 border-b border-bali-sand/40">Banner & Brosur</a>
+            <a href="#contact" class="block text-center bg-bali-red text-white py-3 rounded-full font-semibold">Hubungi Saya</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="hero" class="relative min-h-screen pt-24 flex items-center justify-center overflow-hidden z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative">
+            
+            <!-- ================================================================= -->
+            <!-- 🌺 KODE GAMBAR JEPUN BANYAK DI BELAKANG JUDUL HERO (jepunbanyak.png) -->
+            <!-- ================================================================= -->
+            <div class="absolute -top-10 left-10 w-48 h-48 opacity-15 pointer-events-none select-none z-0">
+                <img src="asset/jepunbanyak.png" alt="Kumpulan Bunga Jepun Bali" class="w-full h-full object-contain">
+            </div>
+            <!-- ================================================================= -->
+
+            <!-- Hero Left: Text & Elegant Info -->
+            <div class="lg:col-span-7 space-y-8 text-center lg:text-left z-10">
+                <div class="inline-flex items-center space-x-2 bg-bali-goldLight border border-bali-gold/40 px-4 py-1.5 rounded-full text-xs font-bold text-bali-red uppercase tracking-widest">
+                    <i class="fa-solid fa-feather-pointed"></i>
+                    <span>Sistem Informasi • ITB STIKOM Bali</span>
+                </div>
+                
+                <div class="space-y-4">
+                    <p class="text-xs sm:text-sm uppercase tracking-widest text-bali-slate font-bold">PORTOFOLIO DIGITAL</p>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-extrabold text-bali-basalt leading-tight">
+                        I Nengah Oka <br class="hidden sm:inline">
+                        <span class="relative inline-block text-bali-red">
+                            Sastrawan
+                            <svg class="absolute -bottom-2 left-0 w-full h-2 text-bali-gold/60" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                <path d="M0,5 Q50,0 100,5 Q50,10 0,5" fill="currentColor"/>
+                            </svg>
+                        </span>
+                    </h1>
+                </div>
+                
+                <p class="text-base sm:text-lg text-bali-slate max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                    Halo, saya I Nengah Oka Sastrawan, seorang Junior Graphic Designer & Web Developer sekaligus mahasiswa Program Studi Sistem Informasi di ITB STIKOM Bali. Senang menggabungkan kreativitas modern dengan sentuhan estetika lokal Bali untuk melahirkan karya digital yang bernilai tinggi.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 pt-4">
+                    <a href="#projects" class="w-full sm:w-auto px-8 py-4 rounded-full bg-bali-red hover:bg-bali-redDark text-white font-semibold shadow-lg hover:shadow-bali-red/15 transition-all duration-300 text-center tracking-wider text-sm">
+                        LIHAT KARYA
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white hover:bg-bali-sand text-bali-basalt font-semibold border border-bali-sand transition-all duration-300 text-center tracking-wider text-sm">
+                        HUBUNGI SAYA
+                    </a>
+                </div>
+
+                <!-- Subtle Bali Accent Divider using the local ukiran -->
+                <div class="flex items-center space-x-3 pt-6 justify-center lg:justify-start">
+                    <div class="h-[1px] w-12 bg-bali-gold/60"></div>
+                    <span class="text-bali-gold text-sm"><i class="fa-solid fa-star"></i></span>
+                    <div class="h-[1px] w-12 bg-bali-gold/60"></div>
+                </div>
+            </div>
+
+            <!-- Hero Right: Profile Image with Elegant Balinese Fine-Border & Jepun Overlay -->
+            <div class="lg:col-span-5 flex justify-center relative">
+                <!-- Outer Shadow/Mandala Ornament -->
+                <div class="absolute w-80 h-80 rounded-full border border-bali-gold/20 animate-spin" style="animation-duration: 25s; border-style: dashed;"></div>
+                
+                <!-- Sandstone frame with traditional geometric accents -->
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl p-2 bg-white border border-bali-sand shadow-xl overflow-visible transform hover:scale-[1.01] transition-transform duration-500 z-10">
+                    
+                    <!-- Traditional Corner Knot SVGs in Frame -->
+                    <div class="absolute inset-2 border border-bali-gold/20 pointer-events-none z-10 rounded-xl m-1"></div>
+                    
+                    <div class="w-full h-full rounded-lg overflow-hidden bg-bali-sand relative">
+                        <!-- ================================================================= -->
+                        <!-- 📸 KODE GAMBAR PROFILE UTAMA (profile.jpg)                       -->
+                        <!-- ================================================================= -->
+                        <img 
+                            src="asset/profile.jpg" 
+                            alt="I Nengah Oka Sastrawan" 
+                            class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600';"
+                        />
+                        <!-- ================================================================= -->
+                    </div>
+
+                    <!-- ================================================================= -->
+                    <!-- 🌺 KODE GAMBAR SATU BUNGA JEPUN MENGAMBANG DI FOTO (jepun.png)    -->
+                    <!-- ================================================================= -->
+                    <div class="absolute -bottom-6 -right-6 w-16 h-16 sm:w-20 sm:h-20 z-20 drop-shadow-md hover:scale-110 transition-transform duration-300 cursor-pointer select-none">
+                        <img src="asset/jepun.png" alt="Bunga Jepun Bali" class="w-full h-full object-contain">
+                    </div>
+                    <!-- ================================================================= -->
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION (BIODATA TRADISIONAL) -->
+    <section id="about" class="py-24 border-t border-bali-sand/60 relative z-10 bg-white/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <!-- ================================================================= -->
+                <!-- 🌺 KODE GAMBAR BUNGA JEPUN DI ATAS JUDUL SEKSI (jepun.png)         -->
+                <!-- ================================================================= -->
+                <div class="w-10 h-10 mx-auto mb-3 select-none">
+                    <img src="asset/jepun.png" alt="Jepun" class="w-full h-full object-contain">
+                </div>
+                <!-- ================================================================= -->
+                <span class="text-bali-red font-bold uppercase tracking-widest text-xs">IDENTITAS DIRI</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-bali-basalt mt-2">Tentang Saya</h2>
+                
+                <!-- ================================================================= -->
+                <!-- 🌺 KODE GAMBAR UKIRAN SEBAGAI PEMBATAS SEKSI (ukiran.png)          -->
+                <!-- ================================================================= -->
+                <div class="w-32 h-6 mx-auto mt-4 opacity-45 select-none">
+                    <img src="asset/ukiran.png" alt="Bali Carving Line" class="w-full h-full object-contain">
+                </div>
+                <!-- ================================================================= -->
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Biodata Table Left (Matches PDF Page 1) -->
+                <div class="lg:col-span-6 bg-white border border-bali-sand/80 rounded-2xl p-6 sm:p-8 shadow-sm relative overflow-hidden">
+                    <!-- Elegant Balinese Top-Border Carving -->
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-bali-gold via-bali-red to-bali-gold"></div>
+                    
+                    <h3 class="text-lg font-serif font-bold text-bali-basalt mb-6 flex items-center space-x-2">
+                        <span class="text-bali-red"><i class="fa-solid fa-address-book text-sm"></i></span>
+                        <span>Lembar Biodata Pribadi</span>
+                    </h3>
+                    
+                    <!-- Table Layout Matching Reference PDF Document Grid -->
+                    <div class="divide-y divide-bali-sand/60 text-xs sm:text-sm">
+                        <!-- Row 1 -->
+                        <div class="grid grid-cols-12 py-3.5 items-center">
+                            <div class="col-span-1 text-bali-red"><i class="fa-solid fa-user"></i></div>
+                            <div class="col-span-3 text-bali-slate font-medium">Nama</div>
+                            <div class="col-span-8 text-bali-basalt font-semibold">I Nengah Oka Sastrawan</div>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="grid grid-cols-12 py-3.5 items-center">
+                            <div class="col-span-1 text-bali-red"><i class="fa-solid fa-cake-candles"></i></div>
+                            <div class="col-span-3 text-bali-slate font-medium">Tempat Lahir</div>
+                            <div class="col-span-8 text-bali-basalt">Bangli</div>
+                        </div>
+                        <!-- Row 3 -->
+                        <div class="grid grid-cols-12 py-3.5 items-center">
+                            <div class="col-span-1 text-bali-red"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <div class="col-span-3 text-bali-slate font-medium">Domisili</div>
+                            <div class="col-span-8 text-bali-basalt">Bangli, Bali</div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="grid grid-cols-12 py-3.5 items-center">
+                            <div class="col-span-1 text-bali-red"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="col-span-3 text-bali-slate font-medium">Pendidikan</div>
+                            <div class="col-span-8 text-bali-basalt">S1 Sistem Informasi</div>
+                        </div>
+                        <!-- Row 5 -->
+                        <div class="grid grid-cols-12 py-3.5 items-center">
+                            <div class="col-span-1 text-bali-red"><i class="fa-solid fa-building-columns"></i></div>
+                            <div class="col-span-3 text-bali-slate font-medium">Kampus</div>
+                            <div class="col-span-8 text-bali-basalt font-medium text-bali-red">ITB STIKOM Bali</div>
+                        </div>
+                        <!-- Row 6 -->
+                        <div class="grid grid-cols-12 py-3.5 items-center">
+                            <div class="col-span-1 text-bali-red"><i class="fa-solid fa-calendar-days"></i></div>
+                            <div class="col-span-3 text-bali-slate font-medium">Semester</div>
+                            <div class="col-span-8 text-bali-basalt">6 (Enam)</div>
+                        </div>
+                        <!-- Row 7 -->
+                        <div class="grid grid-cols-12 py-3.5 items-center">
+                            <div class="col-span-1 text-bali-red"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="col-span-3 text-bali-slate font-medium">Email</div>
+                            <div class="col-span-8 text-bali-basalt break-all">okasastrawan@email.com</div>
+                        </div>
+                        <!-- Row 8 -->
+                        <div class="grid grid-cols-12 py-3.5 items-center">
+                            <div class="col-span-1 text-bali-red"><i class="fa-solid fa-phone"></i></div>
+                            <div class="col-span-3 text-bali-slate font-medium">Telepon</div>
+                            <div class="col-span-8 text-bali-basalt">+62 822-2162-6242</div>
+                        </div>
+                        <!-- Row 9 -->
+                        <div class="grid grid-cols-12 py-3.5 items-center">
+                            <div class="col-span-1 text-bali-red"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="col-span-3 text-bali-slate font-medium">Profesi</div>
+                            <div class="col-span-8 text-bali-gold font-bold">Junior Graphic Designer & Web Developer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Right Description -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="flex items-center space-x-2 text-bali-gold">
+                        <i class="fa-solid fa-quote-left text-2xl opacity-40"></i>
+                        <span class="text-xs uppercase tracking-widest font-bold">Filosofi Kerja</span>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-bali-basalt leading-snug">
+                        Menyelaraskan Struktur Sistem Informasi dengan Nilai Estetis Budaya Leluhur Bali.
+                    </h3>
+                    <p class="text-bali-slate leading-relaxed font-light text-sm sm:text-base">
+                        Saya meyakini bahwa pengembangan perangkat lunak dan desain visual adalah dua hal yang saling melengkapi. Disiplin akademis dari program studi <span class="text-bali-red font-semibold">Sistem Informasi</span> memberikan saya pemahaman logis struktural, sementara kecintaan pada <span class="text-bali-red font-semibold">Desain Grafis</span> memberikan saya kebebasan untuk menuangkan ekspresi estetika.
+                    </p>
+                    <p class="text-bali-slate leading-relaxed font-light text-sm sm:text-base">
+                        Sebagai putra daerah Bangli, saya selalu berusaha menyisipkan jiwa kerajinan, ketelitian, dan ornamen tradisional Bali ke dalam setiap fungsionalitas web modern yang saya ciptakan agar bernilai seni tinggi.
+                    </p>
+                    
+                    <div class="p-4 bg-bali-sand/40 rounded-xl border border-bali-sand/60 flex items-center space-x-3 text-xs text-bali-slate">
+                        <span class="text-bali-gold text-lg"><i class="fa-solid fa-circle-info"></i></span>
+                        <span>Gunakan menu navigasi di atas atau tombol di bawah untuk menelusuri portofolio karya saya.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION (TRADITIONAL CHECKLIST BOARD MATCHING PDF PAGE 2) -->
+    <section id="skills" class="py-24 border-t border-bali-sand/60 relative overflow-hidden bg-white/20">
+        <!-- Giant faint traditional floral outline background -->
+        <div class="absolute inset-y-0 right-0 w-96 opacity-[0.03] pointer-events-none select-none">
+            <img src="asset/ukiran.png" alt="Ukiran Watermark" class="w-full h-full object-contain">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 relative">
+                <!-- ================================================================= -->
+                <!-- 🌺 KODE GAMBAR SATU BUNGA JEPUN SEBAGAI ACCENT JUDUL KEAHLIAN (jepun.png) -->
+                <!-- ================================================================= -->
+                <div class="w-12 h-12 mx-auto mb-1 select-none">
+                    <img src="asset/jepun.png" alt="Bunga Jepun Bali" class="w-full h-full object-contain">
+                </div>
+                <!-- ================================================================= -->
+                <span class="text-bali-red font-bold uppercase tracking-widest text-xs block pt-2">KEMAMPUAN TEKNIS</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-bali-basalt mt-2">Keahlian & Perkakas</h2>
+                
+                <!-- ================================================================= -->
+                <!-- 🌺 KODE GAMBAR UKIRAN DIVIDER KEAHLIAN (ukiran.png)                -->
+                <!-- ================================================================= -->
+                <div class="w-32 h-6 mx-auto mt-4 opacity-45 select-none">
+                    <img src="asset/ukiran.png" alt="Bali Carving Line" class="w-full h-full object-contain">
+                </div>
+                <!-- ================================================================= -->
+            </div>
+
+            <!-- 4-Column Checklist Grid - Exactly matching layout and fields in Page 2 of PDF -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Column 1: Graphic Design -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl p-6 sm:p-8 shadow-sm hover:border-bali-gold/40 transition-all duration-300 relative overflow-hidden">
+                    <!-- Subtle jepun decoration background -->
+                    <div class="absolute -bottom-4 -right-4 w-12 h-12 opacity-[0.15] select-none pointer-events-none">
+                        <img src="asset/jepun.png" alt="Jepun Decoration" class="w-full h-full object-contain">
+                    </div>
+                    
+                    <div class="flex items-center space-x-3 border-b border-bali-sand/60 pb-4 mb-6">
+                        <div class="w-8 h-8 rounded-lg bg-bali-gold/10 flex items-center justify-center text-bali-gold">
+                            <i class="fa-solid fa-palette text-sm"></i>
+                        </div>
+                        <h3 class="text-sm uppercase tracking-widest font-bold text-bali-basalt">Graphic Design</h3>
+                    </div>
+                    
+                    <!-- Checklist Grid -->
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Adobe Photoshop</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Adobe Illustrator</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Canva</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">CorelDRAW</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Web Development -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl p-6 sm:p-8 shadow-sm hover:border-bali-gold/40 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -bottom-4 -right-4 w-12 h-12 opacity-[0.15] select-none pointer-events-none">
+                        <img src="asset/jepun.png" alt="Jepun Decoration" class="w-full h-full object-contain">
+                    </div>
+                    
+                    <div class="flex items-center space-x-3 border-b border-bali-sand/60 pb-4 mb-6">
+                        <div class="w-8 h-8 rounded-lg bg-bali-gold/10 flex items-center justify-center text-bali-gold">
+                            <i class="fa-solid fa-code text-sm"></i>
+                        </div>
+                        <h3 class="text-sm uppercase tracking-widest font-bold text-bali-basalt">Web Dev</h3>
+                    </div>
+                    
+                    <!-- Checklist Grid -->
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">HTML5</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">CSS3</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">JavaScript</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Bootstrap</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">PHP & MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: UI/UX Design -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl p-6 sm:p-8 shadow-sm hover:border-bali-gold/40 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -bottom-4 -right-4 w-12 h-12 opacity-[0.15] select-none pointer-events-none">
+                        <img src="asset/jepun.png" alt="Jepun Decoration" class="w-full h-full object-contain">
+                    </div>
+                    
+                    <div class="flex items-center space-x-3 border-b border-bali-sand/60 pb-4 mb-6">
+                        <div class="w-8 h-8 rounded-lg bg-bali-gold/10 flex items-center justify-center text-bali-gold">
+                            <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
+                        </div>
+                        <h3 class="text-sm uppercase tracking-widest font-bold text-bali-basalt">UI/UX Design</h3>
+                    </div>
+                    
+                    <!-- Checklist Grid -->
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Mockup Design</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Wireframing</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Prototyping</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">User Interface (UI)</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">User Experience (UX)</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Figma Suite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4: Soft Skills (Added precisely from reference PDF) -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl p-6 sm:p-8 shadow-sm hover:border-bali-gold/40 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -bottom-4 -right-4 w-12 h-12 opacity-[0.15] select-none pointer-events-none">
+                        <img src="asset/jepun.png" alt="Jepun Decoration" class="w-full h-full object-contain">
+                    </div>
+                    
+                    <div class="flex items-center space-x-3 border-b border-bali-sand/60 pb-4 mb-6">
+                        <div class="w-8 h-8 rounded-lg bg-bali-gold/10 flex items-center justify-center text-bali-gold">
+                            <i class="fa-solid fa-brain text-sm"></i>
+                        </div>
+                        <h3 class="text-sm uppercase tracking-widest font-bold text-bali-basalt">Soft Skill</h3>
+                    </div>
+                    
+                    <!-- Checklist Grid -->
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Kerja Tim</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Komunikasi Efektif</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Problem Solving</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Kreativitas</span>
+                        </div>
+                        <div class="flex items-start space-x-3 group">
+                            <span class="text-bali-red flex-shrink-0 mt-0.5"><i class="fa-regular fa-square-check text-lg"></i></span>
+                            <span class="text-bali-slate group-hover:text-bali-basalt transition-colors duration-200">Time Management</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WEB DEVELOPMENT PROJECTS SECTION -->
+    <section id="projects" class="py-24 border-t border-bali-sand/60 relative z-10 bg-white/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <!-- ================================================================= -->
+                <!-- 🌺 KODE GAMBAR SATU BUNGA JEPUN DI ATAS JUDUL SEKSI PROYEK (jepun.png) -->
+                <!-- ================================================================= -->
+                <div class="w-10 h-10 mx-auto mb-3 select-none">
+                    <img src="asset/jepun.png" alt="Jepun" class="w-full h-full object-contain">
+                </div>
+                <!-- ================================================================= -->
+                <span class="text-bali-red font-bold uppercase tracking-widest text-xs">REKAYASA WEB & INTERAKTIF</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-bali-basalt mt-2">Proyek Web & Multimedia</h2>
+                
+                <!-- ================================================================= -->
+                <!-- 🌺 KODE GAMBAR UKIRAN DIVIDER PROYEK (ukiran.png)                  -->
+                <!-- ================================================================= -->
+                <div class="w-32 h-6 mx-auto mt-4 opacity-45 select-none">
+                    <img src="asset/ukiran.png" alt="Bali Carving Line" class="w-full h-full object-contain">
+                </div>
+                <!-- ================================================================= -->
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1: Sipadok -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl overflow-hidden hover:border-bali-gold/40 transition-all duration-300 group flex flex-col justify-between shadow-sm hover:shadow-md">
+                    <div>
+                        <div class="h-52 overflow-hidden bg-bali-sand relative cursor-pointer" onclick="openLightbox('asset/sipadok.png', 'SIPADOK - Sistem Pelayanan Dokumen Digital')">
+                            <!-- ================================================================= -->
+                            <!-- 🖥️ KODE GAMBAR PROYEK SIPADOK (sipadok.png)                       -->
+                            <!-- ================================================================= -->
+                            <img 
+                                src="asset/sipadok.png" 
+                                alt="Sipadok Web Interface" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600';"
+                            />
+                            <!-- ================================================================= -->
+                            <div class="absolute inset-0 bg-bali-basalt/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                                <span class="bg-bali-red text-white text-xs px-3.5 py-2 rounded-full border border-bali-gold/40 tracking-wider">
+                                    <i class="fa-solid fa-maximize mr-1.5"></i> PERBESAR GAMBAR
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between text-xs font-semibold">
+                                <span class="text-bali-red uppercase tracking-wider">Web Application</span>
+                                <span class="text-bali-gold"><i class="fa-solid fa-code"></i></span>
+                            </div>
+                            <h3 class="text-lg font-serif font-bold text-bali-basalt">SIPADOK DPMPTSP BANGlI</h3>
+                            <p class="text-xs sm:text-sm text-bali-slate leading-relaxed font-light">
+                                Sistem Informasi Pendataan Dokumen Digital yang dirancang khusus untuk mempermudah proses pencatatan, pencarian, dan pengelolaan administrasi di DPMPTSP Kabupaten Bangli secara cepat, rapi, dan terstruktur.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between text-xs border-t border-bali-sand/40 mt-4">
+                        <span class="text-bali-slate"><i class="fa-solid fa-cubes mr-1.5"></i> PHP, MySQL, Bootstrap</span>
+                        <a href="javascript:void(0)" onclick="openLightbox('asset/sipadok.png', 'SIPADOK - Sistem Pelayanan Dokumen Digital')" class="text-bali-red font-bold hover:text-bali-basalt transition-colors duration-300">
+                            PRATINJAU <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: HPStore -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl overflow-hidden hover:border-bali-gold/40 transition-all duration-300 group flex flex-col justify-between shadow-sm hover:shadow-md">
+                    <div>
+                        <div class="h-52 overflow-hidden bg-bali-sand relative cursor-pointer" onclick="openLightbox('asset/hpstore.png', 'HPStore - Platform E-Commerce Handphone')">
+                            <!-- ================================================================= -->
+                            <!-- 🖥️ KODE GAMBAR PROYEK HPSTORE (hpstore.png)                       -->
+                            <!-- ================================================================= -->
+                            <img 
+                                src="asset/hpstore.png" 
+                                alt="HPStore Interface" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600';"
+                            />
+                            <!-- ================================================================= -->
+                            <div class="absolute inset-0 bg-bali-basalt/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                                <span class="bg-bali-red text-white text-xs px-3.5 py-2 rounded-full border border-bali-gold/40 tracking-wider">
+                                    <i class="fa-solid fa-maximize mr-1.5"></i> PERBESAR GAMBAR
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between text-xs font-semibold">
+                                <span class="text-bali-red uppercase tracking-wider">E-Commerce Web</span>
+                                <span class="text-bali-gold"><i class="fa-solid fa-cart-shopping"></i></span>
+                            </div>
+                            <h3 class="text-lg font-serif font-bold text-bali-basalt">WEBSITE HPSTORE</h3>
+                            <p class="text-xs sm:text-sm text-bali-slate leading-relaxed font-light">
+                                Proyek toko daring interaktif penjualan smartphone dengan katalog modern, sistem keranjang terintegrasi, fitur pencarian responsif, dan panel transaksi yang mudah digunakan.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between text-xs border-t border-bali-sand/40 mt-4">
+                        <span class="text-bali-slate"><i class="fa-solid fa-cubes mr-1.5"></i> HTML5, CSS3, JS Suite</span>
+                        <a href="javascript:void(0)" onclick="openLightbox('asset/hpstore.png', 'HPStore - Platform E-Commerce Handphone')" class="text-bali-red font-bold hover:text-bali-basalt transition-colors duration-300">
+                            PRATINJAU <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Proyek Interaktif Multimedia -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl overflow-hidden hover:border-bali-gold/40 transition-all duration-300 group flex flex-col justify-between shadow-sm hover:shadow-md">
+                    <div>
+                        <div class="h-52 overflow-hidden bg-bali-sand relative cursor-pointer" onclick="openLightbox('asset/multimedia.png', 'Proyek Interaktif Multimedia')">
+                            <!-- ================================================================= -->
+                            <!-- 🖥️ KODE GAMBAR MULTIMEDIA INTERAKTIF (multimedia.png)             -->
+                            <!-- ================================================================= -->
+                            <img 
+                                src="asset/multimedia.png" 
+                                alt="Multimedia Interface" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600';"
+                            />
+                            <!-- ================================================================= -->
+                            <div class="absolute inset-0 bg-bali-basalt/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                                <span class="bg-bali-red text-white text-xs px-3.5 py-2 rounded-full border border-bali-gold/40 tracking-wider">
+                                    <i class="fa-solid fa-maximize mr-1.5"></i> PERBESAR GAMBAR
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center justify-between text-xs font-semibold">
+                                <span class="text-bali-red uppercase tracking-wider">Multimedia Interaktif</span>
+                                <span class="text-bali-gold"><i class="fa-solid fa-gamepad"></i></span>
+                            </div>
+                            <h3 class="text-lg font-serif font-bold text-bali-basalt">APLIKASI INTERAKTIF</h3>
+                            <p class="text-xs sm:text-sm text-bali-slate leading-relaxed font-light">
+                                Perancangan aplikasi simulasi interaktif "Persiapan Alat dan Bahan" yang menggabungkan elemen audio-visual, kontrol tombol dinamis, serta navigasi user-friendly untuk presentasi edukasi.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between text-xs border-t border-bali-sand/40 mt-4">
+                        <span class="text-bali-slate"><i class="fa-solid fa-cubes mr-1.5"></i> UI/UX, Assets Design</span>
+                        <a href="javascript:void(0)" onclick="openLightbox('asset/multimedia.png', 'Proyek Interaktif Multimedia')" class="text-bali-red font-bold hover:text-bali-basalt transition-colors duration-300">
+                            PRATINJAU <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- POSTER GALLERY SECTION -->
+    <section id="posters" class="py-24 border-t border-bali-sand/60 relative overflow-hidden bg-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <!-- ================================================================= -->
+                <!-- 🌺 KODE GAMBAR SATU BUNGA JEPUN DI ATAS SEKSI POSTER (jepun.png)    -->
+                <!-- ================================================================= -->
+                <div class="w-10 h-10 mx-auto mb-3 select-none">
+                    <img src="asset/jepun.png" alt="Jepun" class="w-full h-full object-contain">
+                </div>
+                <!-- ================================================================= -->
+                <span class="text-bali-red font-bold uppercase tracking-widest text-xs">DESAIN PUBLIKASI</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-bali-basalt mt-2">Koleksi Desain Poster</h2>
+                
+                <!-- ================================================================= -->
+                <!-- 🌺 KODE GAMBAR UKIRAN DIVIDER POSTER (ukiran.png)                  -->
+                <!-- ================================================================= -->
+                <div class="w-32 h-6 mx-auto mt-4 opacity-45 select-none">
+                    <img src="asset/ukiran.png" alt="Bali Carving Line" class="w-full h-full object-contain">
+                </div>
+                <!-- ================================================================= -->
+            </div>
+
+            <!-- Poster Grid (4 Items) - Matching exactly page 4 of PDF -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Poster 1: Budaya -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl overflow-hidden hover:border-bali-gold/40 transition-all duration-300 group shadow-sm hover:shadow">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-bali-sand cursor-pointer" onclick="openLightbox('asset/budaya.png', 'Poster Desain Budaya Malu Aparatur')">
+                        <!-- ================================================================= -->
+                        <!-- 🎨 KODE GAMBAR POSTER 1 (budaya.png)                              -->
+                        <!-- ================================================================= -->
+                        <img 
+                            src="asset/budaya.png" 
+                            alt="Poster Budaya" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=400';"
+                        />
+                        <!-- ================================================================= -->
+                        <div class="absolute inset-0 bg-bali-basalt/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5">
+                            <span class="self-end bg-bali-gold text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">Poster 1</span>
+                            <div class="text-left space-y-1">
+                                <h4 class="text-sm font-bold text-white font-serif">10 Budaya Malu Aparatur</h4>
+                                <p class="text-[11px] text-gray-300 font-light leading-relaxed">Kampanye peningkatan kesadaran disiplin dan etos kerja pelayan publik.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster 2: Gratifikasi -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl overflow-hidden hover:border-bali-gold/40 transition-all duration-300 group shadow-sm hover:shadow">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-bali-sand cursor-pointer" onclick="openLightbox('asset/gratifikasi.png', 'Poster Anti Gratifikasi')">
+                        <!-- ================================================================= -->
+                        <!-- 🎨 KODE GAMBAR POSTER 2 (gratifikasi.png)                        -->
+                        <!-- ================================================================= -->
+                        <img 
+                            src="asset/gratifikasi.png" 
+                            alt="Poster Gratifikasi" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=400';"
+                        />
+                        <!-- ================================================================= -->
+                        <div class="absolute inset-0 bg-bali-basalt/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5">
+                            <span class="self-end bg-bali-gold text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">Poster 2</span>
+                            <div class="text-left space-y-1">
+                                <h4 class="text-sm font-bold text-white font-serif">Katakan Tidak pada Gratifikasi</h4>
+                                <p class="text-[11px] text-gray-300 font-light leading-relaxed">Himbauan edukasi tolak suap di lingkungan pelayanan publik Bangli.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster 3: SPN 4 Lapor -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl overflow-hidden hover:border-bali-gold/40 transition-all duration-300 group shadow-sm hover:shadow">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-bali-sand cursor-pointer" onclick="openLightbox('asset/spn4lapor.png', 'Poster SPN4Lapor')">
+                        <!-- ================================================================= -->
+                        <!-- 🎨 KODE GAMBAR POSTER 3 (spn4lapor.png)                            -->
+                        <!-- ================================================================= -->
+                        <img 
+                            src="asset/spn4lapor.png" 
+                            alt="Poster SPN4Lapor" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=400';"
+                        />
+                        <!-- ================================================================= -->
+                        <div class="absolute inset-0 bg-bali-basalt/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5">
+                            <span class="self-end bg-bali-gold text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">Poster 3</span>
+                            <div class="text-left space-y-1">
+                                <h4 class="text-sm font-bold text-white font-serif">Layanan SP4N-LAPOR!</h4>
+                                <p class="text-[11px] text-gray-300 font-light leading-relaxed">Desain media aduan resmi masyarakat Bangli yang tepercaya.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster 4: 5S -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl overflow-hidden hover:border-bali-gold/40 transition-all duration-300 group shadow-sm hover:shadow">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-bali-sand cursor-pointer" onclick="openLightbox('asset/5s.png', 'Poster Kampanye Budaya 5S')">
+                        <!-- ================================================================= -->
+                        <!-- 🎨 KODE GAMBAR POSTER 4 (5s.png)                                  -->
+                        <!-- ================================================================= -->
+                        <img 
+                            src="asset/5s.png" 
+                            alt="Poster Budaya 5S" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=400';"
+                        />
+                        <!-- ================================================================= -->
+                        <div class="absolute inset-0 bg-bali-basalt/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5">
+                            <span class="self-end bg-bali-gold text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">Poster 4</span>
+                            <div class="text-left space-y-1">
+                                <h4 class="text-sm font-bold text-white font-serif">Mari Budayakan 5S</h4>
+                                <p class="text-[11px] text-gray-300 font-light leading-relaxed">Budaya Senyum, Salam, Sapa, Sopan, Santun untuk mewujudkan pelayanan prima.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER & BROCHURE SECTION -->
+    <section id="banners" class="py-24 border-t border-bali-sand/60 relative z-10 bg-white/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <!-- ================================================================= -->
+                <!-- 🌺 KODE GAMBAR SATU BUNGA JEPUN DI ATAS SEKSI BANNER (jepun.png)   -->
+                <!-- ================================================================= -->
+                <div class="w-10 h-10 mx-auto mb-3 select-none">
+                    <img src="asset/jepun.png" alt="Jepun" class="w-full h-full object-contain">
+                </div>
+                <!-- ================================================================= -->
+                <span class="text-bali-red font-bold uppercase tracking-widest text-xs">MEDIA BALIHO & INFORMASI</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-bali-basalt mt-2">Desain Banner & Brosur</h2>
+                
+                <!-- ================================================================= -->
+                <!-- 🌺 KODE GAMBAR UKIRAN DIVIDER BANNER (ukiran.png)                  -->
+                <!-- ================================================================= -->
+                <div class="w-32 h-6 mx-auto mt-4 opacity-45 select-none">
+                    <img src="asset/ukiran.png" alt="Bali Carving Line" class="w-full h-full object-contain">
+                </div>
+                <!-- ================================================================= -->
+            </div>
+
+            <!-- Banner Grid (2 Items) - Page 4 PDF -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                
+                <!-- Banner 1: Zona -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl overflow-hidden hover:border-bali-gold/40 transition-all duration-300 group shadow-sm hover:shadow-md flex flex-col justify-between">
+                    <div class="relative overflow-hidden aspect-[16/9] bg-bali-sand cursor-pointer" onclick="openLightbox('asset/zona.png', 'Banner Zona Integritas')">
+                        <!-- ================================================================= -->
+                        <!-- 🎏 KODE GAMBAR BANNER 1 (zona.png)                                -->
+                        <!-- ================================================================= -->
+                        <img 
+                            src="asset/zona.png" 
+                            alt="Banner Zona Integritas" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600';"
+                        />
+                        <!-- ================================================================= -->
+                        <div class="absolute inset-0 bg-bali-basalt/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                            <span class="bg-bali-red text-white text-xs px-3.5 py-2 rounded-full border border-bali-gold/40 tracking-wider">
+                                <i class="fa-solid fa-maximize mr-1.5"></i> PERBESAR BANNER
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-bali-red font-semibold uppercase tracking-wider">Banner 1</span>
+                        <h3 class="text-base sm:text-lg font-serif font-bold text-bali-basalt mt-1">Sertifikat Zona Integritas MPP Bangli</h3>
+                        <p class="text-xs sm:text-sm text-bali-slate mt-2 leading-relaxed font-light">Desain baliho media sosial dwi-bahasa untuk menyambut Wilayah Bebas Korupsi (WBK) di Mall Pelayanan Publik Bangli.</p>
+                    </div>
+                </div>
+
+                <!-- Banner 2: Integritas -->
+                <div class="bg-white border border-bali-sand/80 rounded-2xl overflow-hidden hover:border-bali-gold/40 transition-all duration-300 group shadow-sm hover:shadow-md flex flex-col justify-between">
+                    <div class="relative overflow-hidden aspect-[16/9] bg-bali-sand cursor-pointer" onclick="openLightbox('asset/integritas.png', 'Banner Anti Korupsi & Integritas')">
+                        <!-- ================================================================= -->
+                        <!-- 🎏 KODE GAMBAR BANNER 2 (integritas.png)                          -->
+                        <!-- ================================================================= -->
+                        <img 
+                            src="asset/integritas.png" 
+                            alt="Banner Anti Korupsi" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600';"
+                        />
+                        <!-- ================================================================= -->
+                        <div class="absolute inset-0 bg-bali-basalt/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                            <span class="bg-bali-red text-white text-xs px-3.5 py-2 rounded-full border border-bali-gold/40 tracking-wider">
+                                <i class="fa-solid fa-maximize mr-1.5"></i> PERBESAR BANNER
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-bali-red font-semibold uppercase tracking-wider">Banner 2</span>
+                        <h3 class="text-base sm:text-lg font-serif font-bold text-bali-basalt mt-1">Sosialisasi Anti Gratifikasi & Korupsi</h3>
+                        <p class="text-xs sm:text-sm text-bali-slate mt-2 leading-relaxed font-light">Desain papan pengumuman integritas "Korupsi Bukan Rejeki" dengan visualisasi yang kokoh, modern, dan informatif.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Brochure (1 Item) - "jangan di isi penjelasan cukup gambar" -->
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-6">
+                    <span class="text-bali-red font-bold uppercase tracking-widest text-xs">Media Brosur</span>
+                    <h3 class="text-xl font-serif font-bold text-bali-basalt mt-1">Karya Desain Brosur</h3>
+                    <div class="w-12 h-[1px] bg-bali-gold mx-auto mt-3 opacity-60"></div>
+                </div>
+
+                <!-- Frame Brosur Sederhana yang Menyorot Kekuatan Visual Saja (Tanpa Penjelasan Teks) -->
+                <div class="bg-white border border-bali-sand rounded-2xl p-4 sm:p-6 shadow-md relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-bali-red/5 to-transparent pointer-events-none"></div>
+                    
+                    <div class="relative overflow-hidden rounded-xl bg-bali-sand aspect-[4/3] sm:aspect-[16/10] cursor-pointer" onclick="openLightbox('asset/brosur.png', 'Desain Brosur Informasi')">
+                        <!-- ================================================================= -->
+                        <!-- 📜 KODE GAMBAR BROSUR (brosur.png)                                -->
+                        <!-- ================================================================= -->
+                        <img 
+                            src="asset/brosur.png" 
+                            alt="Desain Brosur" 
+                            class="w-full h-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-700"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&q=80&w=800';"
+                        />
+                        <!-- ================================================================= -->
+                        
+                        <!-- Overlay minimalis petunjuk pembesaran gambar saja tanpa penjelasan teks -->
+                        <div class="absolute inset-0 bg-bali-basalt/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                            <span class="bg-bali-red text-white text-xs sm:text-sm px-4 py-2 rounded-full border border-bali-gold/40 shadow-md tracking-wider">
+                                <i class="fa-solid fa-maximize mr-1.5"></i> PERBESAR BROSUR
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 border-t border-bali-sand/60 relative overflow-hidden z-10 bg-white/40">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-bali-gold/5 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <!-- ================================================================= -->
+                <!-- 🌺 KODE GAMBAR SATU BUNGA JEPUN DI ATAS SEKSI KONTAK (jepun.png)   -->
+                <!-- ================================================================= -->
+                <div class="w-10 h-10 mx-auto mb-3 select-none">
+                    <img src="asset/jepun.png" alt="Jepun" class="w-full h-full object-contain">
+                </div>
+                <!-- ================================================================= -->
+                <span class="text-bali-red font-bold uppercase tracking-widest text-xs">KOLABORASI KARYA</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-bali-basalt mt-2">Hubungi Saya</h2>
+                
+                <!-- ================================================================= -->
+                <!-- 🌺 KODE GAMBAR UKIRAN DIVIDER KONTAK (ukiran.png)                  -->
+                <!-- ================================================================= -->
+                <div class="w-32 h-6 mx-auto mt-4 opacity-45 select-none">
+                    <img src="asset/ukiran.png" alt="Bali Carving Line" class="w-full h-full object-contain">
+                </div>
+                <!-- ================================================================= -->
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Info Cards -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="bg-white border border-bali-sand/80 p-6 rounded-2xl flex items-start space-x-4 shadow-sm">
+                        <div class="w-12 h-12 rounded-xl bg-bali-gold/10 flex items-center justify-center text-bali-red flex-shrink-0">
+                            <i class="fa-solid fa-envelope text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-bali-slate uppercase tracking-wider font-semibold">Surat Elektronik</p>
+                            <p class="text-sm sm:text-base font-bold text-bali-basalt mt-1 break-all">okasastrawan@email.com</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-bali-sand/80 p-6 rounded-2xl flex items-start space-x-4 shadow-sm">
+                        <div class="w-12 h-12 rounded-xl bg-bali-gold/10 flex items-center justify-center text-bali-red flex-shrink-0">
+                            <i class="fa-solid fa-phone text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-bali-slate uppercase tracking-wider font-semibold">Telepon & WhatsApp</p>
+                            <p class="text-sm sm:text-base font-bold text-bali-basalt mt-1">+62 822-2162-6242</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-bali-sand/80 p-6 rounded-2xl flex items-start space-x-4 shadow-sm">
+                        <div class="w-12 h-12 rounded-xl bg-bali-gold/10 flex items-center justify-center text-bali-red flex-shrink-0">
+                            <i class="fa-solid fa-map-location-dot text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-bali-slate uppercase tracking-wider font-semibold">Lokasi Kantor / Domisili</p>
+                            <p class="text-sm sm:text-base font-bold text-bali-basalt mt-1">Bangli, Bali, Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-8 bg-white border border-bali-sand/80 p-8 rounded-2xl shadow-sm">
+                    <form onsubmit="event.preventDefault(); showCustomToast();" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-semibold text-bali-slate uppercase tracking-wider">Nama Lengkap</label>
+                                <input type="text" class="w-full bg-bali-linen border border-bali-sand rounded-xl px-4 py-3 text-bali-basalt focus:border-bali-red focus:ring-1 focus:ring-bali-red outline-none transition-all duration-300 text-sm" placeholder="Contoh: I Wayan Adi" required>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-semibold text-bali-slate uppercase tracking-wider">Alamat Email</label>
+                                <input type="email" class="w-full bg-bali-linen border border-bali-sand rounded-xl px-4 py-3 text-bali-basalt focus:border-bali-red focus:ring-1 focus:ring-bali-red outline-none transition-all duration-300 text-sm" placeholder="email@anda.com" required>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-semibold text-bali-slate uppercase tracking-wider">Subjek Pesan</label>
+                            <input type="text" class="w-full bg-bali-linen border border-bali-sand rounded-xl px-4 py-3 text-bali-basalt focus:border-bali-red focus:ring-1 focus:ring-bali-red outline-none transition-all duration-300 text-sm" placeholder="Contoh: Penawaran Kolaborasi Proyek" required>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-semibold text-bali-slate uppercase tracking-wider">Isi Surat / Detail Penawaran</label>
+                            <textarea rows="4" class="w-full bg-bali-linen border border-bali-sand rounded-xl px-4 py-3 text-bali-basalt focus:border-bali-red focus:ring-1 focus:ring-bali-red outline-none transition-all duration-300 resize-none text-sm" placeholder="Tuliskan gagasan kolaborasi kerja sama Anda di sini..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-bali-red hover:bg-bali-redDark text-white font-bold transition-all duration-300 uppercase tracking-widest text-xs shadow-md">
+                            KIRIM SURAT SEKARANG <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-bali-sand/60 py-12 text-center text-xs text-bali-slate relative z-10 overflow-hidden">
+        
+        <!-- Subtle ukiran watermark on footer background -->
+        <div class="absolute -bottom-10 -right-10 w-32 h-32 opacity-5 pointer-events-none select-none">
+            <img src="asset/ukiran.png" alt="Ukiran Bali Footer" class="w-full h-full object-contain">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
+            <!-- ================================================================= -->
+            <!-- 🌺 KODE GAMBAR UKIRAN KECIL DI SEKSI FOOTER (ukiran.png)           -->
+            <!-- ================================================================= -->
+            <div class="w-16 h-8 mx-auto opacity-60 select-none">
+                <img src="asset/ukiran.png" alt="Bali Carving" class="w-full h-full object-contain">
+            </div>
+            <!-- ================================================================= -->
+            
+            <div class="flex justify-center space-x-6 text-sm">
+                <a href="https://github.com" target="_blank" class="text-bali-slate hover:text-bali-red transition-colors duration-300"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="text-bali-slate hover:text-bali-red transition-colors duration-300"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://instagram.com" target="_blank" class="text-bali-slate hover:text-bali-red transition-colors duration-300"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://dribbble.com" target="_blank" class="text-bali-slate hover:text-bali-red transition-colors duration-300"><i class="fa-brands fa-dribbble"></i></a>
+            </div>
+            
+            <p class="tracking-wide text-xs">
+                &copy; 2026 <span class="text-bali-basalt font-semibold">I Nengah Oka Sastrawan</span>. Hak Cipta Dilindungi Undang-Undang.
+            </p>
+            <p class="text-bali-gold text-[10px] uppercase tracking-widest font-semibold">
+                Dibuat dengan Dedikasi & Menjunjung Luhur Adat Budaya Bali
+            </p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE LIGHTBOX / PREVIEW MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-bali-basalt/95 flex flex-col justify-center items-center p-4 sm:p-8 backdrop-blur-sm">
+        <!-- Close Button -->
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-bali-gold text-2xl focus:outline-none transition-colors duration-300 z-[110]">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Main Lightbox Image Frame -->
+        <div class="relative max-w-4xl max-h-[80vh] w-full h-full flex justify-center items-center">
+            <img id="lightbox-img" src="" alt="Lightbox Preview" class="max-w-full max-h-full object-contain rounded-lg border border-white/10 shadow-2xl">
+        </div>
+
+        <!-- Lightbox Caption & Details -->
+        <div class="mt-6 text-center">
+            <h4 id="lightbox-title" class="text-base sm:text-lg font-serif font-bold text-white tracking-wide"></h4>
+            <p class="text-xs text-bali-gold mt-1 uppercase tracking-widest">Klik tombol silang (X) atau klik luar gambar untuk kembali</p>
+        </div>
+    </div>
+
+    <!-- CUSTOM TOAST NOTIFICATION (Replaces alert()) -->
+    <div id="custom-toast" class="fixed bottom-6 right-6 z-[120] transform translate-y-20 opacity-0 bg-white border border-bali-gold p-4 rounded-xl shadow-xl flex items-center space-x-3 transition-all duration-500 max-w-sm pointer-events-none">
+        <div class="w-8 h-8 rounded-full bg-bali-gold/15 flex items-center justify-center text-bali-red text-sm">
+            <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <div>
+            <h5 class="text-xs font-bold text-bali-basalt uppercase tracking-widest">Pesan Terkirim</h5>
+            <p class="text-[11px] text-bali-slate mt-0.5">Suksma! Surat Anda berhasil dikirim ke server mock.</p>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Toggle Mobile Navigation Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close Mobile Menu after clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Lightbox Popup Modal Handlers
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+
+        function openLightbox(src, title) {
+            lightboxImg.src = src;
+            lightboxTitle.textContent = title;
+            lightbox.classList.remove('hidden');
+            // Prevent body scroll behind modal
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightboxImg.src = '';
+            lightboxTitle.textContent = '';
+            // Restore normal scroll
+            document.body.style.overflow = '';
+        }
+
+        // Close Lightbox when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.closest('.flex')) {
+                closeLightbox();
+            }
+        });
+
+        // Close Lightbox on Escape Key Press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                closeLightbox();
+            }
+        });
+
+        // Custom Toast Notification System
+        function showCustomToast() {
+            const toast = document.getElementById('custom-toast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            
+            // Clear inputs inside form
+            const inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                if(input.type !== 'submit') input.value = '';
+            });
+
+            // Slide out toast after 4 seconds
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
