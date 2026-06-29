@@ -7,7 +7,7 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Premium Typography (Sans & Serif) -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Font Awesome for sleek icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -59,6 +59,27 @@
             background-position: 0 0, 20px 20px;
             opacity: 0.015;
         }
+
+        /* Rotate animation for the music player icon */
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .spin-active {
+            animation: spin-slow 12s linear infinite;
+        }
+
+        /* Soundwave equalizer indicator animations */
+        @keyframes soundwave {
+            0%, 100% { height: 3px; }
+            50% { height: 14px; }
+        }
+        .wave-bar {
+            animation: soundwave 1s ease-in-out infinite;
+        }
+        .wave-bar:nth-child(2) { animation-delay: 0.15s; }
+        .wave-bar:nth-child(3) { animation-delay: 0.3s; }
+        .wave-bar:nth-child(4) { animation-delay: 0.45s; }
     </style>
 </head>
 <body class="bg-bali-linen text-bali-basalt font-sans selection:bg-bali-gold selection:text-white">
@@ -240,7 +261,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Biodata Table Left (Matches PDF Page 1) -->
+                <!-- Biodata Table Left -->
                 <div class="lg:col-span-6 bg-white border border-bali-sand/80 rounded-2xl p-6 sm:p-8 shadow-sm relative overflow-hidden">
                     <!-- Elegant Balinese Top-Border Carving -->
                     <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-bali-gold via-bali-red to-bali-gold"></div>
@@ -250,7 +271,6 @@
                         <span>Lembar Biodata Pribadi</span>
                     </h3>
                     
-                    <!-- Table Layout Matching Reference PDF Document Grid -->
                     <div class="divide-y divide-bali-sand/60 text-xs sm:text-sm">
                         <!-- Row 1 -->
                         <div class="grid grid-cols-12 py-3.5 items-center">
@@ -335,7 +355,7 @@
         </div>
     </section>
 
-    <!-- SKILLS SECTION (TRADITIONAL CHECKLIST BOARD MATCHING PDF PAGE 2) -->
+    <!-- SKILLS SECTION (TRADITIONAL CHECKLIST BOARD) -->
     <section id="skills" class="py-24 border-t border-bali-sand/60 relative overflow-hidden bg-white/20">
         <!-- Giant faint traditional floral outline background -->
         <div class="absolute inset-y-0 right-0 w-96 opacity-[0.03] pointer-events-none select-none">
@@ -363,12 +383,11 @@
                 <!-- ================================================================= -->
             </div>
 
-            <!-- 4-Column Checklist Grid - Exactly matching layout and fields in Page 2 of PDF -->
+            <!-- 4-Column Checklist Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 
                 <!-- Column 1: Graphic Design -->
                 <div class="bg-white border border-bali-sand/80 rounded-2xl p-6 sm:p-8 shadow-sm hover:border-bali-gold/40 transition-all duration-300 relative overflow-hidden">
-                    <!-- Subtle jepun decoration background -->
                     <div class="absolute -bottom-4 -right-4 w-12 h-12 opacity-[0.15] select-none pointer-events-none">
                         <img src="asset/jepun.png" alt="Jepun Decoration" class="w-full h-full object-contain">
                     </div>
@@ -481,7 +500,7 @@
                     </div>
                 </div>
 
-                <!-- Column 4: Soft Skills (Added precisely from reference PDF) -->
+                <!-- Column 4: Soft Skills -->
                 <div class="bg-white border border-bali-sand/80 rounded-2xl p-6 sm:p-8 shadow-sm hover:border-bali-gold/40 transition-all duration-300 relative overflow-hidden">
                     <div class="absolute -bottom-4 -right-4 w-12 h-12 opacity-[0.15] select-none pointer-events-none">
                         <img src="asset/jepun.png" alt="Jepun Decoration" class="w-full h-full object-contain">
@@ -692,7 +711,7 @@
                 <!-- ================================================================= -->
             </div>
 
-            <!-- Poster Grid (4 Items) - Matching exactly page 4 of PDF -->
+            <!-- Poster Grid (4 Items) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- Poster 1: Budaya -->
@@ -814,7 +833,7 @@
                 <!-- ================================================================= -->
             </div>
 
-            <!-- Banner Grid (2 Items) - Page 4 PDF -->
+            <!-- Banner Grid (2 Items) -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 
                 <!-- Banner 1: Zona -->
@@ -1030,6 +1049,47 @@
         </div>
     </footer>
 
+    <!-- ================================================================= -->
+    <!-- 🎵 KODE PEMUTAR MUSIK LATAR BALI TRADISIONAL (Gus Teja - Hero)    -->
+    <!-- ================================================================= -->
+    <div id="audio-widget" class="fixed bottom-6 left-6 z-[90] bg-white border border-bali-gold rounded-2xl shadow-2xl p-3 flex items-center space-x-3 max-w-[260px] sm:max-w-xs transition-all duration-500 transform hover:scale-[1.02] select-none">
+        
+        <!-- HTML5 Audio Element playing beautiful ambient Balinese flute by Gus Teja -->
+        <audio id="bg-music" loop preload="auto">
+            <source src="https://www.murnis.com/murnis_wp/wp-content/uploads/2018/10/Gus-Teja-Hero.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Rotating Jepun / Disc Cover -->
+        <div class="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border border-bali-gold/40 bg-bali-goldLight flex items-center justify-center flex-shrink-0 shadow-inner">
+            <!-- ================================================================= -->
+            <!-- 🌺 KODE GAMBAR SATU BUNGA JEPUN BERPUTAR DI PEMUTAR MUSIK (jepun.png) -->
+            <!-- ================================================================= -->
+            <img id="music-flower" src="asset/jepun.png" alt="Music Spin" class="w-7 h-7 sm:w-8 sm:h-8 object-contain transition-transform duration-1000 ease-linear" onerror="this.onerror=null; this.src='https://placehold.co/40x40/C29543/ffffff?text=♫';">
+            <!-- ================================================================= -->
+        </div>
+        
+        <!-- Controls & Metadata -->
+        <div class="flex-grow pr-1">
+            <p class="text-[9px] uppercase tracking-widest text-bali-red font-bold font-sans">Alunan Suling</p>
+            <h5 class="text-[11px] sm:text-xs font-serif font-extrabold text-bali-basalt truncate w-24 sm:w-32">Gus Teja — Hero</h5>
+            
+            <!-- Dynamic Playing Indicator (Wave Visualizer) -->
+            <div id="wave-container" class="flex items-end space-x-[2px] h-3 mt-1 opacity-50">
+                <span class="w-[2px] bg-bali-red rounded-full h-1"></span>
+                <span class="w-[2px] bg-bali-red rounded-full h-1"></span>
+                <span class="w-[2px] bg-bali-red rounded-full h-1"></span>
+                <span class="w-[2px] bg-bali-red rounded-full h-1"></span>
+            </div>
+        </div>
+        
+        <!-- Play / Pause Action Button -->
+        <button id="music-toggle-btn" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-bali-red hover:bg-bali-redDark text-white flex items-center justify-center shadow-md focus:outline-none transition-all duration-300 transform active:scale-95 border border-bali-gold/40">
+            <i id="play-icon" class="fa-solid fa-play ml-0.5 text-xs"></i>
+        </button>
+    </div>
+    <!-- ================================================================= -->
+
     <!-- INTERACTIVE LIGHTBOX / PREVIEW MODAL -->
     <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-bali-basalt/95 flex flex-col justify-center items-center p-4 sm:p-8 backdrop-blur-sm">
         <!-- Close Button -->
@@ -1131,6 +1191,34 @@
                 toast.classList.add('translate-y-20', 'opacity-0');
             }, 4000);
         }
+
+        // Traditional Background Music Controller Script
+        const bgMusic = document.getElementById('bg-music');
+        const musicToggleBtn = document.getElementById('music-toggle-btn');
+        const playIcon = document.getElementById('play-icon');
+        const musicFlower = document.getElementById('music-flower');
+        const waveBars = document.querySelectorAll('#wave-container span');
+
+        musicToggleBtn.addEventListener('click', () => {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                // Play / Pause Icons Toggle
+                playIcon.classList.remove('fa-play', 'ml-0.5');
+                playIcon.classList.add('fa-pause');
+                // Rotate Flower Animation
+                musicFlower.classList.add('spin-active');
+                // Visualizer Wave Animation
+                waveBars.forEach(bar => bar.classList.add('wave-bar'));
+            } else {
+                bgMusic.pause();
+                // Reset Icons
+                playIcon.classList.remove('fa-pause');
+                playIcon.classList.add('fa-play', 'ml-0.5');
+                // Stop Animations
+                musicFlower.classList.remove('spin-active');
+                waveBars.forEach(bar => bar.classList.remove('wave-bar'));
+            }
+        });
     </script>
 </body>
 </html>
